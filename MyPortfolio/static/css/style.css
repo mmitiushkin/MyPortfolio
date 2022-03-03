@@ -3112,6 +3112,7 @@ h3 {
 /*=================== contact form start ====================*/
 /* line 45, ../../Arafath/CL/Cl November/228. Resume-02/HTML/scss/_contact.scss */
 .contact-title {
+  color: #FFFFFF;
   font-size: 27px;
   font-weight: 600;
   margin-bottom: 20px;
