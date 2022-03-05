@@ -22,7 +22,7 @@
                         <div class="slider_text">
                             <h3>Hi there, I am Dmitriy <br>
                                 <span>Backend Developer</span></h3>
-                        <a class="boxed-btn3-line" href="#">View Works</a>
+                        <a class="boxed-btn3-line" href="{% url 'mainapp:works' %}">View Works</a>
                         </div>
                     </div>
                     <div class="my_img d-none d-lg-block">
@@ -83,14 +83,16 @@
       <div class="d-none d-sm-block mb-5 pb-4">
       <div class="row">
         <div class="col-12">
-          <h2 class="contact-title">Message me</h2>
+          <h2 class="contact-title">Contact me</h2>
+            <span>{{ message_name }}</span>
         </div>
         <div class="col-lg-8">
-          <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+
+          <form class="form-contact contact_form" action="" method="post" id="contactForm">
+            {% csrf_token %}
             <div class="row">
               <div class="col-12">
                 <div class="form-group">
-
                     <textarea class="form-control w-100" name="message" id="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'" placeholder = 'Enter Message'></textarea>
                 </div>
               </div>
@@ -104,16 +106,12 @@
                   <input class="form-control" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" placeholder = 'Enter email address'>
                 </div>
               </div>
-              <div class="col-12">
-                <div class="form-group">
-                  <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'" placeholder = 'Enter Subject'>
-                </div>
-              </div>
             </div>
             <div class="form-group mt-3">
               <button type="submit" class="button button-contactForm btn_4 boxed-btn">Send Message</button>
             </div>
           </form>
+
         </div>
       </div>
     </div>
