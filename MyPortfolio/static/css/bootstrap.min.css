@@ -591,7 +591,8 @@ pre code {
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
-    margin-left: auto
+    margin-left: auto;
+    margin-top: 90px;
 }
 
 @media (min-width:576px) {
@@ -2057,7 +2058,7 @@ pre code {
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
-    color: #495057;
+    color: #fff;
     background-color: #fff;
     background-clip: padding-box;
     border: 1px solid #ced4da;
@@ -2071,7 +2072,7 @@ pre code {
 }
 
 .form-control:focus {
-    color: #495057;
+    color: #fff;
     background-color: #fff;
     border-color: #80bdff;
     outline: 0;
