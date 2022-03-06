@@ -1,9 +1,10 @@
 from django.core.mail import send_mail
 from django.shortcuts import render
+from django.conf import settings
+from django.contrib import messages
 
 from .forms import ContactForm
 from .models import Project
-from django.conf import settings
 
 
 def index(request):
@@ -25,6 +26,7 @@ def index(request):
                 message_email,
                 [settings.RECIPIENT_ADDRESS],
             )
+            messages.success(request, 'Письмо успешно отправлено!')
     else:
         context = {'projects': projects}
         form = ContactForm()

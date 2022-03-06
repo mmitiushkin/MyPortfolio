@@ -8,8 +8,8 @@
 
 <body>
     <!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->
 
 
 
@@ -17,6 +17,20 @@
     <div class="slider_area">
         <div class="single_slider  d-flex align-items-center slider_bg_1">
             <div class="container">
+                {% if messages %}
+            <div class="alert {% if messages %} alert-success {% else %} alert-warning {% endif %} alert-dismissible fade show"
+                 role="alert"
+                 style="margin-top: 50px;">
+                {% if messages %}
+                    {% for message in messages %}
+                        {{ message }}
+                    {% endfor %}
+                {% endif %}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        {% endif %}
                 <div class="row align-items-center position-relative">
                     <div class="col-lg-9">
                         <div class="slider_text">
@@ -80,11 +94,24 @@
   <section class="contact-section section_padding">
     <div class="testimonial_area">
     <div class="container">
+        {% if messages %}
+            <div class="alert {% if messages %} alert-success {% else %} alert-warning {% endif %} alert-dismissible fade show"
+                 role="alert"
+                 style="margin-top: 50px;">
+                {% if messages %}
+                    {% for message in messages %}
+                        {{ message }}
+                    {% endfor %}
+                {% endif %}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        {% endif %}
       <div class="d-none d-sm-block mb-5 pb-4">
       <div class="row">
         <div class="col-12">
           <h2 class="contact-title">Contact me</h2>
-            <span>{{ message_name }}</span>
         </div>
         <div class="col-lg-8">
 
